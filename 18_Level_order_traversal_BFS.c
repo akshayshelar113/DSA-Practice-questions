@@ -118,6 +118,7 @@ void LevelOrder(struct node *pRoot)
         pPtr = Dequeue(&pQueue);
         printf("\nIn Level Order In while after dequeue\n");
         printf("%d\t", pPtr->iData);
+
         if (pPtr->pLchild != NULL)
         {
             printf("\nIn Level Order In while in pPtr->pLchild != NULL before enqueue\n");
@@ -153,12 +154,12 @@ void Enqueue(struct QueueNode **pProot, struct node *pNode)
 
     if (NULL == *pProot)
     {
-        printf("\nIn Enqueue in stack if pPrtr in empty\n");
+        printf("\nIn Enqueue in stack if pProot in empty\n");
         *pProot = pNewNode;
         return;
     }
 
-    printf("\nIn Enqueue in stack if pPrtr in not empty\n");
+    printf("\nIn Enqueue in stack if pProot in not empty\n");
 
     pTemp = *pProot;
     while (pTemp->pNext != NULL)
